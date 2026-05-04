@@ -1,4 +1,19 @@
-# kr260-multisensor-pipeline
+# KR260 Multi-Sensor Streaming Pipeline
+
+## Overview
+Real-time sensor data pipeline:
+
+IMU → Pico → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
+
+## Current Status
+- AXI DMA pipeline working
+- UART bridge (Pico) in progress
+- IMU integration underway
+
+## Next Steps
+- Validate IMU data streaming
+- Add camera input
+- Implement timestamp alignment
 
 ## Github Structure
 
