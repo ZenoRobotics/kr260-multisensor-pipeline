@@ -3,15 +3,15 @@
 ## Overview
 Real-time sensor data pipeline:
 
-IMU → Pico → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
+IMU → Mega → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
 
 ## Current Status
 - AXI DMA pipeline working
-- UART bridge (Pico) in progress
-- IMU integration underway
+- UART bridge (Arduino Mega) achieved
+- IMU integration complete
 
 ## Next Steps
-- Validate IMU data streaming
+- Validate IMU data streaming - completed
 - Add camera input
 - Implement timestamp alignment
 
