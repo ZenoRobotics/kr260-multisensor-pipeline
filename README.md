@@ -1,4 +1,4 @@
-# KR260 Multi-Sensor Streaming Pipeline
+# KR260 Multi-Sensor AXI-DMA Streaming Pipeline
 
 ## Overview
 Real-time sensor data pipeline:
