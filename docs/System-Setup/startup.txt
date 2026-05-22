@@ -1,0 +1,21 @@
+Load DTO & .bin:
+
+cd ~/kria_overlay_plus         **********************************
+
+sudo fpgautil -o top_kr260_uio.dtbo  (if you make error: sudo xmutil unloadapp) unload live or reboot. 
+   verify: cat /sys/class/uio/uio*/name
+sudo fpgautil -b ./top_kr260_wrapper_v2.bin -f Full
+
+sudo modprobe u-dma-buf udmabuf0=1048576
+
+ls /dev/udmabuf*
+ls /sys/class/u-dma-buf/
+cat /sys/class/u-dma-buf/udmabuf0/phys_addr
+cat /sys/class/u-dma-buf/udmabuf0/size
+
+If modprobe fails, then from the build directory try:
+
+sudo insmod ./u-dma-buf.ko udmabuf0=1048576
+
+
+//------------ Setup UDP Socket ------------------\\
