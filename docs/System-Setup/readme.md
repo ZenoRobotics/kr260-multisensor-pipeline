@@ -1,2 +1,2 @@
-# Descriptions of Instructions in System Setup Docs.
+# Instructions in System Setup Docs.
 
