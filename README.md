@@ -37,5 +37,8 @@ IMU → Mega → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
    mwr 0xff5e0200 0x0100
    rst -system
    ```
+   This allows JTAG to take over the boot on rst -system.
+
+
 
     
