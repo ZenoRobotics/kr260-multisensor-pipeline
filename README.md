@@ -39,6 +39,17 @@ IMU → Mega → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
    ```
    This allows JTAG to take over the boot on rst -system.
 
+   This is the list of errors I was running into with default QSPI boot:
+   ```
+   .text at valid address but memory write errors
+   A53 runaway / EDITR not ready
+   debug working one night and failing the next
+   Ubuntu/boot image interactions
+   golden design intermittently working
+   ```
+
+
+
 
 
     
