@@ -19,3 +19,23 @@ IMU → Mega → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
 
 <img width="368" height="458" alt="image" src="https://github.com/user-attachments/assets/3b80be9f-5e30-4bf3-ab59-475bf087dae2" />
 
+## Issues
+
+1) There are major issues with trying to use both Vivado ILA for HW debug and Vitis for running software to test the hardware. They both share the same JTAG port and it just doesn't work.
+
+2) Vitis hangs on the Axi-DMA code:
+   ```
+   Status = XAxiDma_CfgInitialize(&AxiDma, CfgPtr);
+   ```
+   When the board is powered up or reset in Bare-Metal mode by default QSPI boot mode. So, one has to switch boot to JTAG mode. These are the instructions to accomplish that.
+
+   To bring up the “Task: XSDB Console” in Vitis 2025, press Debug. Then in that Console enter:
+   ```
+   connect
+   targets -set -filter {name =~ "PSU"}
+   mwr 0xffca0010 0x0
+   mwr 0xff5e0200 0x0100
+   rst -system
+   ```
+
+    
