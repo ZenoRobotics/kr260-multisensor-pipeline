@@ -21,7 +21,7 @@ IMU → Mega → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
 
 ## Issues
 
-1) There are major issues with trying to use both Vivado ILA for HW debug and Vitis for running software to test the hardware. They both share the same JTAG port and it just doesn't work.
+1) There are major issues with trying to use both Vivado ILA for HW debug and Vitis for running software to test the hardware. They both share the same JTAG port and for this board, that is an issue.
 
 2) Vitis hangs on the Axi-DMA code:
    ```
