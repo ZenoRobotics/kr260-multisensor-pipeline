@@ -27,7 +27,7 @@ IMU → Mega → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
    ```
    Status = XAxiDma_CfgInitialize(&AxiDma, CfgPtr);
    ```
-   When the board is powered up or reset in Bare-Metal mode by default QSPI boot mode. So, one has to switch boot to JTAG mode. These are the instructions to accomplish that.
+   When the board is powered up or reset in Bare-Metal mode the default is QSPI boot mode. So, one has to switch boot to JTAG mode. These are the instructions to accomplish that.
 
    To bring up the “Task: XSDB Console” in Vitis 2025, press Debug. Then in that Console enter:
    ```
