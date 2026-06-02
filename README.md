@@ -47,7 +47,13 @@ IMU → Mega → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
    Ubuntu/boot image interactions
    golden design intermittently working
    ```
+### Boot Image
 
+I was changing the boot versions back and forth, and forgot which one I had for image A. I thought it was the newer 2025 version, but I hadn't booted the Kria since I performed the change to get the VIVADO ILA and Vitis debug working at the same time. 
+
+I tried booting it tonight (6/1/2026) and it wouldn't boot. So, I was fairly sure I had the new version installed for images A & B, but I went ahead and installed version BOOT-k26-starter-kit-20230516185703.bin in Image A. The Kria was then able to boot after that.
+
+Image B is still the newer boot image. The Xilinx Boot Image Recovery Tool has Image A as the "Requested Boot Image".
 
 
 
