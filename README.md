@@ -55,7 +55,9 @@ I tried booting it tonight (6/1/2026) and it wouldn't boot. So, I was fairly sur
 
 Image B is still the newer boot image. The Xilinx Boot Image Recovery Tool has Image A as the "Requested Boot Image".
 
+## System Startup Steps
 
-
+1) Boot Ubuntu on Kria and Jetson.
+2) Connect ethernet cord to Kria (top right eithernet port ) and the Jetson.
 
     
