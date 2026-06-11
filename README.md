@@ -1,4 +1,6 @@
 # Low-Latency Multi-Sensor Edge AI Pipeline (Jetson + KR260)
+Some material from the course of the same name.
+This makes a great central location for finding steps to be followed for certain functionality.
 
 ## Overview
 Real-time sensor data pipeline:
@@ -9,10 +11,9 @@ IMU → Mega → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
 - AXI DMA pipeline working
 - UART bridge (Arduino Mega) achieved
 - IMU integration complete
+- Validate IMU data streaming - completed
 
 ## Next Steps
-- Validate IMU data streaming - completed
-- Add camera input
 - Implement timestamp alignment
 
 ## Github Structure
