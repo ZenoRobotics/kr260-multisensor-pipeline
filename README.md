@@ -33,13 +33,13 @@ IMU → Mega → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
 
 3) Put Vitis into JTAG boot mode:
 
-Follow these instructions to enable the XSDB Console (maybe there is a simpler way to do this?) so that Vitis can be put in the JTAG mode using TCL commands given below. 
+   Follow these instructions to enable the XSDB Console (maybe there is a simpler way to do this?) so that Vitis can be put in the JTAG mode using TCL commands given below. 
 
-First press DEBUG symbol in the left most column pane (just left of Vitis Explorer. You can then see the play, stop, step over, etc. symbols shown in the top left of the VITIS Explorer window. Press the green arrow to start Debug. Once it starts, there will be a blue triangle button on left, just under the green triangle you just pressed.
+   First press DEBUG symbol in the left most column pane (just left of Vitis Explorer. You can then see the play, stop, step over, etc. symbols shown in the top left of the VITIS Explorer window. Press the green arrow to start Debug. Once it starts, there will be a blue triangle button on left, just under the green triangle you just pressed.
 
-The code will start to run but then hang at the XAxiDMA_CfgInitialize() function. This can be seen by using the step over button instead of the run button. Press the square in the DEBUG menu display to exit that simulation.
+   The code will start to run but then hang at the XAxiDMA_CfgInitialize() function. This can be seen by using the step over button instead of the run button. Press the square in the DEBUG menu display to exit that simulation.
 
-This process then allows you to use the XSDB Console so that you can type in the commands needed to put Vitis in JTAG mode. Type the following series of TCL commands at the prompt in the XSDB Console:
+   This process then allows you to use the XSDB Console so that you can type in the commands needed to put Vitis in JTAG mode. Type the following series of TCL commands at the prompt in the XSDB Console:
    ```
    connect
    targets -set -filter {name =~ "PSU"}
