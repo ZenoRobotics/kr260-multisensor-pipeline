@@ -1,6 +1,7 @@
 # Low-Latency Multi-Sensor Edge AI Pipeline (Jetson + KR260)
-Some material from the course of the same name.
-This makes a great central location for finding steps to be followed for certain functionality.
+You can find setup instructions here for the the course "Low-Latency Multi-Sensor Edge AI Pipeline (Jetson + KR260)".
+
+This makes a great central location for finding steps to be followed for system setup and running.
 
 ## Overview
 Real-time sensor data pipeline:
