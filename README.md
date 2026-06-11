@@ -29,13 +29,17 @@ IMU → Mega → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
    ```
    Status = XAxiDma_CfgInitialize(&AxiDma, CfgPtr);
    ```
-   when the board is powered up or reset in Bare-Metal mode to its default QSPI boot mode. So, one has to switch boot to JTAG mode. These are the instructions to enable the XSDB Console (maybe there is a simpler way to do this?) so that Vitis can be put in the JTAG mode. 
+   when the board is powered up or reset in Bare-Metal mode to its default QSPI boot mode. So, one has to switch boot to JTAG mode.
 
-   First press DEBUG symbol in the left most column pane (just left of Vitis Explorer. You can then see the play, stop, step over, etc. symbols shown in the top left of the VITIS Explorer window. Press the green arrow to start Debug. Once it starts, there will be a blue triangle button on left, just under the green triangle you just pressed.
+3) Put Vitis into JTAG boot mode:
 
-   The code will start to run but then hang at the XAxiDMA_CfgInitialize() function. This can be seen by using the step over button instead of the run button. Press the square in the DEBUG menu display to exit that simulation.
+Follow these instructions to enable the XSDB Console (maybe there is a simpler way to do this?) so that Vitis can be put in the JTAG mode using TCL commands given below. 
 
-   This process then allows you to use the XSDB Console so than you can type in the commands needed to put Vitis in JTAG mode.Type the following series of commands at the prompt in the XSDB Console:
+First press DEBUG symbol in the left most column pane (just left of Vitis Explorer. You can then see the play, stop, step over, etc. symbols shown in the top left of the VITIS Explorer window. Press the green arrow to start Debug. Once it starts, there will be a blue triangle button on left, just under the green triangle you just pressed.
+
+The code will start to run but then hang at the XAxiDMA_CfgInitialize() function. This can be seen by using the step over button instead of the run button. Press the square in the DEBUG menu display to exit that simulation.
+
+This process then allows you to use the XSDB Console so that you can type in the commands needed to put Vitis in JTAG mode. Type the following series of TCL commands at the prompt in the XSDB Console:
    ```
    connect
    targets -set -filter {name =~ "PSU"}
@@ -53,7 +57,7 @@ IMU → Mega → KR260 (PL) → AXI DMA → DDR → UDP → Jetson → AI
    Ubuntu/boot image interactions
    golden design intermittently working
    ```
-### Boot Image
+### Boot Image Notes
 
 I was changing the boot versions back and forth, and forgot which one I had for image A. I thought it was the newer 2025 version, but I hadn't booted the Kria since I performed the change to get the VIVADO ILA and Vitis debug working at the same time. 
 
