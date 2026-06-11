@@ -1,4 +1,4 @@
-# KR260 Multi-Sensor AXI-DMA Streaming Pipeline
+# Low-Latency Multi-Sensor Edge AI Pipeline (Jetson + KR260)
 
 ## Overview
 Real-time sensor data pipeline:
