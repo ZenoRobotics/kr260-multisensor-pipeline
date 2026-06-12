@@ -67,6 +67,9 @@ Image B is still the newer boot image. The Xilinx Boot Image Recovery Tool has I
 
 ## System Startup Steps
 
+### 
+
+
 1) Boot Ubuntu on Kria and Jetson.
 2) Connect ethernet cord to Kria (top right eithernet port ) and the Jetson.
 
